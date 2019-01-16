@@ -61,12 +61,19 @@ table {
 	align-items: @align;
 }
 
-.education-style() {
+.main-section() { 
+	.custom-flex(flex-start, space-between)
 
-}
+	p {
+		font-size: 1.6rem;
 
-.work-style() {
-
+	}
+	ul { 
+		font-size: 1.6rem;
+		li {
+			
+		}
+	}
 }
 
 
@@ -103,10 +110,10 @@ header {
 nav {
 	.custom-flex(center, space-around);
 		.nav-button {
+			.custom-flex(center, center);
 			background-color: @meginksgreen;
 			width: 20%;
 			height: 40px;
-			margin: 20px;
 			a {	
 				font-size: 2rem; 
 				text-decoration: none;
@@ -124,9 +131,55 @@ nav {
 				color: @meginksblack;
 			}
 	}
+}
 
-section {
+.main-content {
+	display: flex;
+	flex-direction: column;
+.intro {
+	.main-section();
 	h2 {
-		font-size: 2.5rem;
+		font-size: 3rem;
 	}
+	p {
+		padding: 20px;
+		margin: 0 auto;
+		font-size: 2.4rem;
+		strong {
+			font-weight: bold;
+		}
+	}
+}
+
+.skills {
+	.main-section();
+	h2 {
+		font-size: 3rem;
+	}
+}
+
+.education {
+	.main-section();
+	h2 {
+		font-size: 3rem;
+	}
+	}
+
+
+.work-history {
+	.main-section();
+	h2 {
+		font-size: 3rem;
+	}
+}
+}
+
+
+
+.education-box {
+
+}
+
+.work-hist-box {
+
 }
