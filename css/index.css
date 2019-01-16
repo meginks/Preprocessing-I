@@ -126,6 +126,9 @@ table {
   border-collapse: collapse;
   border-spacing: 0;
 }
+/***** VARIABLES ******/
+/**colors**/
+/******* MIXINS ****/
 /* Set every element's box-sizing to border-box */
 * {
   box-sizing: border-box;
@@ -133,4 +136,53 @@ table {
 html,
 body {
   height: 100%;
+}
+html {
+  /*1rem = 10px now*/
+  font-size: 62.5%;
+}
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  margin: 0 auto;
+  flex-direction: column;
+}
+header {
+  padding: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+header h1 {
+  font-size: 3.5rem;
+  color: #546541;
+  font-weight: bold;
+}
+header nav {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+header nav .nav-button a {
+  font-size: 2rem;
+  margin: 20px;
+  text-decoration: none;
+  padding: 10px 20px;
+  background-color: #546541;
+  color: #eee, #eee;
+}
+header nav .nav-button a:link {
+  color: #eee;
+}
+header nav .nav-button a:visited {
+  color: #eee;
+}
+header nav .nav-button a:hover {
+  background-color: #e3a60f;
+  color: #272725;
+}
+section h2 {
+  font-size: 2.5rem;
 }
