@@ -162,17 +162,16 @@ html {
   height: auto;
 }
 header {
-  width: 100%;
   margin: 0 auto;
+  width: 100%;
   display: flex;
-  align-items: space-between;
+  flex-direction: column;
   justify-content: space-between;
 }
 header .name {
   width: 100%;
   display: flex;
   align-items: flex-start;
-  justify-content: center;
   background-color: #e3a60f;
 }
 header h1 {
@@ -184,9 +183,8 @@ header h1 {
 }
 header nav {
   border-bottom: 0.1rem solid #e3a60f;
-  justify-content: space-around;
   display: flex;
-  justify-content: center;
+  justify-content: space-around;
   align-items: center;
   background-color: #546541;
   padding: 2rem;
@@ -208,23 +206,20 @@ header nav a:hover {
   background-color: #e3a60f;
   color: #272725, black;
 }
-/**header media query**/
-@media (max-width: 500px) {
+@media (max-width: 600px) {
+  header nav {
+    display: flex;
+    flex-direction: column;
+  }
+}
+@media (max-width: 600px) {
   header {
     flex-direction: column;
     align-items: center;
     justify-content: center;
   }
-  h1 {
-    width: 100%;
-    text-align: center;
-  }
-  nav {
-    display: flex;
-    flex-direction: column;
-    width: 100%;
-  }
 }
+/**header media query**/
 .main-content {
   width: 100%;
 }
