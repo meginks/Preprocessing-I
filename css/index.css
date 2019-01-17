@@ -381,3 +381,24 @@ footer #contact h2 {
   font-weight: bold;
   font-size: 3rem;
 }
+@media screen and (max-width: 500px) {
+  .container {
+    display: flex;
+    flex-direction: column;
+  }
+  .container .main-content {
+    display: flex;
+    flex-direction: column;
+  }
+  #education {
+    display: flex;
+    flex-direction: column;
+  }
+  #education .section-content {
+    display: flex;
+    flex-direction: column;
+  }
+  #education .section-content .education-box {
+    width: 100%;
+  }
+}

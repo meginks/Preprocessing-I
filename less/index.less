@@ -347,4 +347,30 @@ footer {
 			font-size: 3rem;
 		}
 	}
+} 
+
+//*** MOBILE ***/
+
+@media screen and (max-width: 500px) {
+	.container {
+		display: flex;
+		flex-direction: column;
+		.main-content {
+			display:flex;
+			flex-direction: column;
+		}
+	}
+
+	#education {
+		display: flex;
+		flex-direction: column;
+		.section-content {
+			display: flex;
+			flex-direction: column;
+			.education-box {
+				width: 100%;
+			}
+		}
+	}
+
 }
