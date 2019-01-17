@@ -96,6 +96,7 @@ table {
 
 html, body {
 	height: auto;
+	background-color: @meginksblack;
 }
 
 
@@ -124,18 +125,19 @@ header {
 	.name {
 	width: 100%;
 	display: flex;
-	align-items: center;
+	align-items: flex-start;
 	justify-content: center;
 	background-color: @meginksyellow;
 	}
 	h1 {
 		font-size: 3.5rem;
-		color: @meginksgreen;
+		color: @meginksblack, black;
 		font-weight: bold;
 		padding: 2rem;
-		text-align:center;
+		text-align:left;
 	}
 	nav {
+		border-bottom: .1rem solid @meginksyellow;
 		.custom-flex(center, space-around);
 		.custom-flex(center, center);
 		background-color: @meginksgreen;
@@ -155,7 +157,7 @@ header {
 				}
 				a:hover{
 					background-color: @meginksyellow;
-					color: @meginksblack;
+					color: @meginksblack, black;
 				}
 		}
 }
@@ -179,7 +181,6 @@ header {
 
 .main-content {
 	width: 100%;
-	border: 2px solid @meginksyellow;
 }
 
 @media (max-width: 500px) {
@@ -197,11 +198,13 @@ header {
 }
 
 .main-section {
+	background-color: #eee;
 	display: flex;
 	flex-direction: column;
 	height: auto;
 	align-items: space-between;
 	justify-content: flex-start;
+	margin: 2rem;
 	.section-title {
 		width: 100%;
 		font-size: 3rem;
@@ -213,14 +216,13 @@ header {
 
 #intro {
 	color: #eee;
-	width: 100%;
-	margin: 0 auto;
 	display:flex;
 	flex-direction: column;
 	.intro-content {
+		color: @meginksblack;
 		display: flex;
-		justify-content: center;
-		align-items: center;
+		justify-content: flex-start;
+		align-items: flex-start;
 		width: 100%;
 		margin: 0 auto;
 		padding: 0 auto;
@@ -228,17 +230,15 @@ header {
 	p {
 		font-size: 2rem;
 		padding: 1rem;
-		color: @meginksblack;
+		color: @meginksblack, black;
 	}
 } 
 
 
 
 #skills {
-	width: 100%;
 	display: flex;
 	flex-direction: column;
-	border: 1px solid black;
 	.skills-box {
 		width: 100%;
 		height: auto;
@@ -267,10 +267,9 @@ header {
 //	}
 
 #education {
-	width: 100%;
+	color: @meginksblack, black;
 	display: flex;
 	flex-direction: column;
-	border: 1px solid black;
 	.section-content {
 		display: flex;
 		flex-direction: row;
@@ -299,8 +298,8 @@ header {
 }
 
 #work-history {
+	color: @meginksblack, black;
 	display: flex;
-	border: 1px solid black;
 	.main-section {
 		display: flex;
 	}
@@ -310,7 +309,6 @@ header {
 		flex-wrap: wrap;
 		.work-hist-box {
 			width: 25%;
-			border: 1px solid black;
 			margin: 0 auto;
 			p {
 				line-height: 2.1rem;
@@ -335,13 +333,18 @@ header {
 }
 
 footer {
+	background-color: @meginksyellow;
 	width: 100%;
 	border-top: 1px solid @meginksgreen;
-	padding-top: 2rem;
+	padding: 2rem;
 	font-size: 2rem;
 	margin: 2rem;
-	.contact {
+	#contact {
 		.custom-flex(center, center);
 		flex-direction: column;
+		h2 {
+			font-weight: bold;
+			font-size: 3rem;
+		}
 	}
 }

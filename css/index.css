@@ -146,6 +146,7 @@ table {
 html,
 body {
   height: auto;
+  background-color: #272725;
 }
 html {
   /*1rem = 10px now*/
@@ -170,18 +171,19 @@ header {
 header .name {
   width: 100%;
   display: flex;
-  align-items: center;
+  align-items: flex-start;
   justify-content: center;
   background-color: #e3a60f;
 }
 header h1 {
   font-size: 3.5rem;
-  color: #546541;
+  color: #272725, black;
   font-weight: bold;
   padding: 2rem;
-  text-align: center;
+  text-align: left;
 }
 header nav {
+  border-bottom: 0.1rem solid #e3a60f;
   justify-content: space-around;
   display: flex;
   justify-content: center;
@@ -204,7 +206,7 @@ header nav a:visited {
 }
 header nav a:hover {
   background-color: #e3a60f;
-  color: #272725;
+  color: #272725, black;
 }
 /**header media query**/
 @media (max-width: 500px) {
@@ -225,7 +227,6 @@ header nav a:hover {
 }
 .main-content {
   width: 100%;
-  border: 2px solid #e3a60f;
 }
 @media (max-width: 500px) {
   .main-content {
@@ -241,11 +242,13 @@ header nav a:hover {
   }
 }
 .main-section {
+  background-color: #eee;
   display: flex;
   flex-direction: column;
   height: auto;
   align-items: space-between;
   justify-content: flex-start;
+  margin: 2rem;
 }
 .main-section .section-title {
   width: 100%;
@@ -256,15 +259,14 @@ header nav a:hover {
 }
 #intro {
   color: #eee;
-  width: 100%;
-  margin: 0 auto;
   display: flex;
   flex-direction: column;
 }
 #intro .intro-content {
+  color: #272725;
   display: flex;
-  justify-content: center;
-  align-items: center;
+  justify-content: flex-start;
+  align-items: flex-start;
   width: 100%;
   margin: 0 auto;
   padding: 0 auto;
@@ -272,13 +274,11 @@ header nav a:hover {
 #intro p {
   font-size: 2rem;
   padding: 1rem;
-  color: #272725;
+  color: #272725, black;
 }
 #skills {
-  width: 100%;
   display: flex;
   flex-direction: column;
-  border: 1px solid black;
 }
 #skills .skills-box {
   width: 100%;
@@ -294,10 +294,9 @@ header nav a:hover {
   padding: 1rem;
 }
 #education {
-  width: 100%;
+  color: #272725, black;
   display: flex;
   flex-direction: column;
-  border: 1px solid black;
 }
 #education .section-content {
   display: flex;
@@ -330,8 +329,8 @@ header nav a:hover {
   justify-content: space-between;
 }
 #work-history {
+  color: #272725, black;
   display: flex;
-  border: 1px solid black;
 }
 #work-history .main-section {
   display: flex;
@@ -343,7 +342,6 @@ header nav a:hover {
 }
 #work-history .section-content .work-hist-box {
   width: 25%;
-  border: 1px solid black;
   margin: 0 auto;
 }
 #work-history .section-content .work-hist-box p {
@@ -366,15 +364,20 @@ header nav a:hover {
   padding: 1rem;
 }
 footer {
+  background-color: #e3a60f;
   width: 100%;
   border-top: 1px solid #546541;
-  padding-top: 2rem;
+  padding: 2rem;
   font-size: 2rem;
   margin: 2rem;
 }
-footer .contact {
+footer #contact {
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
+}
+footer #contact h2 {
+  font-weight: bold;
+  font-size: 3rem;
 }
