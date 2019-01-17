@@ -143,98 +143,63 @@ nav {
 	}
 }
 
-
-
-
-.main-section { 
-	.custom-flex(flex-start, space-between);
-	flex-direction: row;
-	
-	p {
-		font-size: 1.6rem;
+.main-section {
+	h2 {
+		width:30%;
 	}
-
-	ul { 
-		font-size: 1.6rem;
-	};
 }
 
-.main-content {
-	display: flex;
-	flex-direction: column;
 .intro {
-	.custom-flex(flex-start, flex-start);
-	flex-direction: column;
-	h2 {
-		font-size: 3rem;
-	}
-	p {
-		padding: 20px;
-		margin: 0 auto;
-		font-size: 2.4rem;
-		strong {
-			font-weight: bold;
-		}
-	}
+	width: 100%;
+	margin: 0 auto;
+	display:flex;
+	flex-direction: row;
+	border: 1px solid black;
+} 
+
+.intro-content {
+	width: 100%;
+	border: 1px solid black;
 }
 
 .skills {
-	h2 {
-		font-size: 3rem;
-	}
-	ul {
-		.custom-flex(center, space-around){
-			flex-wrap: wrap;
-		}
-	}
+	width: 100%;
+	display: flex;
+	flex-direction: row;
+	border: 1px solid black;
+}
+
+.skills-box {
+	width: 100%;
+	border: 1px solid black;
 }
 
 .education {
-	.custom-flex(flex-start, flex-start);
-	flex-direction: column;
-	h2 {
-		font-size: 3rem;
-	}
-	}
-
-
-.work-history {
-	.align-left;
-	h2 {
-		font-size: 3rem;
-	}
+	width: 100%;
+	display: flex;
+	flex-direction: row;
+	border: 1px solid black;
 }
-}
-
 
 
 .education-box {
-	ul {
-		padding: 10px;
-		.job-title {
-		font-size: 2.4rem;
-		padding: 2px;
-		}
-		.company {
-		
-		}
-		.company-location {
+	border: 1px solid black;
+	width: 33%;
+	margin: 0 auto;
+}
+.work-history {
+	display: flex;
+	border: 1px solid black;
 
-		}
 
-		.dates-worked {
-
-		}
-
-		li {
-			.ed-box-style;
-		}
+	.work-hist-box {
+		width: 25%;
+		border: 1px solid black;
+		margin: 0 auto;
 	}
 }
 
-.work-hist-box {
-	padding: 10px;
-}
+
 
 footer {
 	width: 100%;
