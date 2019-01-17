@@ -128,6 +128,7 @@ table {
 }
 /***** VARIABLES ******/
 /**colors**/
+/** media queries **/
 /******* MIXINS ****/
 .ed-box-style {
   text-align: left;
@@ -206,13 +207,13 @@ header nav a:hover {
   background-color: #e3a60f;
   color: #272725, black;
 }
-@media (max-width: 600px) {
+@media (max-width: 500px) {
   header nav {
     display: flex;
     flex-direction: column;
   }
 }
-@media (max-width: 600px) {
+@media (max-width: 500px) {
   header {
     flex-direction: column;
     align-items: center;
@@ -340,8 +341,11 @@ header nav a:hover {
   margin: 0 auto;
 }
 #work-history .section-content .work-hist-box p {
+  background-color: #e3a60f;
   line-height: 2.1rem;
   font-size: 1.8rem;
+  border-bottom: 1px dotted #272725, black;
+  border: 1px dotted #272725;
 }
 #work-history .section-content .work-hist-box p strong {
   font-weight: bold;
@@ -394,6 +398,13 @@ footer #contact h2 {
     flex-direction: column;
   }
   #education .section-content .education-box {
+    width: 100%;
+  }
+  #work-history .section-content {
+    display: flex;
+    flex-direction: column;
+  }
+  #work-history .section-content .work-hist-box {
     width: 100%;
   }
 }

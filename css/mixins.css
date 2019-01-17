@@ -1,0 +1,11 @@
+/******* MIXINS ****/
+.ed-box-style {
+  text-align: left;
+  font-size: 2rem;
+}
+.align-left {
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  flex-direction: column;
+}

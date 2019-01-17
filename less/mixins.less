@@ -1,0 +1,35 @@
+/******* MIXINS ****/
+.custom-flex(@align, @justify){
+	display: flex;
+	justify-content: @justify;
+	align-items: @align;
+}
+
+.ed-box-style {
+	text-align: left;
+	font-size: 2rem;	
+}
+
+.align-left {
+	display: flex;
+	align-items: flex-start;
+	justify-content: flex-start;
+	flex-direction: column;
+}
+
+.custom-lists(){
+		list-style-type: disc; 
+		list-style-position: inside; 
+		li {
+			padding: 1rem;
+		}
+}
+
+.section-para(){
+	line-height: 2.1rem;
+				font-size: 1.8rem;
+				strong {
+					font-weight: bold; 
+					font-size: 2rem;
+				}
+}

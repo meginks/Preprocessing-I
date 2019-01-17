@@ -1,94 +1,8 @@
-// Is this working?
-/* http://meyerweb.com/eric/tools/css/reset/ 
-   v2.0 | 20110126
-   License: none (public domain)
-*/
+@import "reset.less";
+@import "variables.less";
+@import "mixins.less";
 
-html, body, div, span, applet, object, iframe,
-h1, h2, h3, h4, h5, h6, p, blockquote, pre,
-a, abbr, acronym, address, big, cite, code,
-del, dfn, em, img, ins, kbd, q, s, samp,
-small, strike, strong, sub, sup, tt, var,
-b, u, i, center,
-dl, dt, dd, ol, ul, li,
-fieldset, form, label, legend,
-table, caption, tbody, tfoot, thead, tr, th, td,
-article, aside, canvas, details, embed, 
-figure, figcaption, footer, header, hgroup, 
-menu, nav, output, ruby, section, summary,
-time, mark, audio, video {
-	margin: 0;
-	padding: 0;
-	border: 0;
-	font-size: 100%;
-	font: inherit;
-	vertical-align: baseline;
-}
-/* HTML5 display-role reset for older browsers */
-article, aside, details, figcaption, figure, 
-footer, header, hgroup, menu, nav, section {
-	display: block;
-}
-body {
-	line-height: 1;
-}
-ol, ul {
-	list-style: none;
-}
-blockquote, q {
-	quotes: none;
-}
-blockquote:before, blockquote:after,
-q:before, q:after {
-	content: '';
-	content: none;
-}
-table {
-	border-collapse: collapse;
-	border-spacing: 0;
-}
 
-/***** VARIABLES ******/ 
-/**colors**/
-@meginksyellow: #e3a60f;
-@meginksgreen:#546541;
-@meginksblack:#272725;
-
-/******* MIXINS ****/
-.custom-flex(@align, @justify){
-	display: flex;
-	justify-content: @justify;
-	align-items: @align;
-}
-
-.ed-box-style {
-	text-align: left;
-	font-size: 2rem;	
-}
-
-.align-left {
-	display: flex;
-	align-items: flex-start;
-	justify-content: flex-start;
-	flex-direction: column;
-}
-
-.custom-lists(){
-		list-style-type: disc; 
-		list-style-position: inside; 
-		li {
-			padding: 1rem;
-		}
-}
-
-.section-para(){
-	line-height: 2.1rem;
-				font-size: 1.8rem;
-				strong {
-					font-weight: bold; 
-					font-size: 2rem;
-				}
-}
 /* Set every element's box-sizing to border-box */
 * {
     box-sizing: border-box;
@@ -157,12 +71,12 @@ header {
 					background-color: @meginksyellow;
 					color: @meginksblack, black;
 				}
-		@media (max-width: 600px) {
+		@media @mobile {
 			display:flex;
 			flex-direction: column;
 		}
 		}
-		@media (max-width: 600px) {
+		@media @mobile {
 			flex-direction: column;
 			align-items: center;
 			justify-content: center;
@@ -183,7 +97,7 @@ header {
 	width: 100%;
 }
 
-@media (max-width: 500px) {
+@media @mobile {
 	.main-content{
 		display: flex;
 		flex-direction: column;
@@ -311,12 +225,15 @@ header {
 			width: 25%;
 			margin: 0 auto;
 			p {
+				background-color: @meginksyellow;
 				line-height: 2.1rem;
 				font-size: 1.8rem;
+				border-bottom: 1px dotted @meginksblack, black;
 				strong {
 					font-weight: bold; 
 					font-size: 2rem;
 				}
+			border: 1px dotted @meginksblack;
 			}
 			ul {
 				.custom-lists();
@@ -324,13 +241,11 @@ header {
 				display: flex;
 				flex-direction: column;
 				justify-content: space-between;
-				li {
-					
-				}
 			}
-	}
+		}
 	}
 }
+
 
 footer {
 	background-color: @meginksyellow;
@@ -351,7 +266,7 @@ footer {
 
 //*** MOBILE ***/
 
-@media screen and (max-width: 500px) {
+@media screen and @mobile {
 	.container {
 		display: flex;
 		flex-direction: column;
@@ -368,6 +283,16 @@ footer {
 			display: flex;
 			flex-direction: column;
 			.education-box {
+				width: 100%;
+			}
+		}
+	} 
+
+	#work-history {
+		.section-content {
+			display: flex;
+			flex-direction: column;
+			.work-hist-box {
 				width: 100%;
 			}
 		}
