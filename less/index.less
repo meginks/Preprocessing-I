@@ -73,14 +73,32 @@ table {
 	flex-direction: column;
 }
 
+.custom-lists(){
+		list-style-type: disc; 
+		list-style-position: inside; 
+		li {
+			padding: 1rem;
+		}
+}
+
+.section-para(){
+	line-height: 2.1rem;
+				font-size: 1.8rem;
+				strong {
+					font-weight: bold; 
+					font-size: 2rem;
+				}
+}
 /* Set every element's box-sizing to border-box */
 * {
     box-sizing: border-box;
 }
 
 html, body {
-	height: 100%;
+	height: auto;
 }
+
+
 html { 
 	/*1rem = 10px now*/
 	font-size: 62.5%;
@@ -103,19 +121,26 @@ header {
 	display: flex;
 	align-items: space-between;
 	justify-content: space-between;
+	.name {
+	width: 100%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	background-color: @meginksyellow;
+	}
 	h1 {
-		width: 30%;
 		font-size: 3.5rem;
 		color: @meginksgreen;
 		font-weight: bold;
 		padding: 2rem;
+		text-align:center;
 	}
 	nav {
 		.custom-flex(center, space-around);
-				.custom-flex(center, center);
-				background-color: @meginksgreen;
-				width: 70%;
-				height:auto;
+		.custom-flex(center, center);
+		background-color: @meginksgreen;
+		padding: 2rem;
+		height:auto;
 				a {	
 					font-size: 2rem; 
 					text-decoration: none;
@@ -134,7 +159,7 @@ header {
 				}
 		}
 }
-
+/**header media query**/ 
 @media (max-width: 500px) {
 	header {
 	flex-direction: column;
@@ -143,6 +168,7 @@ header {
 	}
 	h1 {
 		width: 100%;
+		text-align:center;
 	}
 	nav {
 		display:flex;
@@ -153,6 +179,7 @@ header {
 
 .main-content {
 	width: 100%;
+	border: 2px solid @meginksyellow;
 }
 
 @media (max-width: 500px) {
@@ -171,17 +198,16 @@ header {
 
 .main-section {
 	display: flex;
-	flex-direction: row;
+	flex-direction: column;
+	height: auto;
+	align-items: space-between;
+	justify-content: flex-start;
 	.section-title {
-		width:30%; 
+		width: 100%;
 		font-size: 3rem;
 		padding: 1rem;
 		background-color: @meginksgreen;
 		color: #eee;
-	}
-	.section-content {
-		width: 70%;
-
 	}
 }
 
@@ -190,8 +216,7 @@ header {
 	width: 100%;
 	margin: 0 auto;
 	display:flex;
-	flex-direction: row;
-	border: 1px solid black;
+	flex-direction: column;
 	.intro-content {
 		display: flex;
 		justify-content: center;
@@ -199,7 +224,6 @@ header {
 		width: 100%;
 		margin: 0 auto;
 		padding: 0 auto;
-		border: 1px solid black;
 	}
 	p {
 		font-size: 2rem;
@@ -213,37 +237,100 @@ header {
 #skills {
 	width: 100%;
 	display: flex;
-	flex-direction: row;
+	flex-direction: column;
 	border: 1px solid black;
-
-.skills-box {
-	width: 100%;
-	border: 1px solid black;
+	.skills-box {
+		width: 100%;
+		height: auto;
+		margin: 0 auto;
+		ul {
+			display: flex;
+			flex-direction: row;
+			font-size: 2rem;
+			li {
+				padding: 1rem;
+			}
+		}
 }
 } 
+//*@media (max-width: 500px) {
+//	#skills {
+//		.skills-box{
+//			ul {
+//			display: flex;
+//			flex-direction: column;
+//			align-items: center;
+//			justify-content: center;
+//			}
+//			}
+//		}
+//	}
 
 #education {
 	width: 100%;
 	display: flex;
-	flex-direction: row;
+	flex-direction: column;
 	border: 1px solid black;
+	.section-content {
+		display: flex;
+		flex-direction: row;
+		.education-box {
+			width: 33%;
+			margin: 0 auto;
+			p {
+				.section-para();
+			}
+			br {
+				line-height: 2.5rem;
+			}
+			ul {
+				list-style: none;
+				list-style-type: disc;
+				margin: auto;
+				padding: .5rem;
+				text-align: left;
+				font-size: 1.6rem;
+				display: flex;
+				flex-direction: column;
+				justify-content: space-between;
+			}
+		}
+	}
 }
 
-
-.education-box {
-	border: 1px solid black;
-	width: 33%;
-	margin: 0 auto;
-}
 #work-history {
 	display: flex;
 	border: 1px solid black;
-
-
-	.work-hist-box {
-		width: 25%;
-		border: 1px solid black;
-		margin: 0 auto;
+	.main-section {
+		display: flex;
+	}
+	.section-content {
+		display: flex;
+		flex-direction: row;
+		flex-wrap: wrap;
+		.work-hist-box {
+			width: 25%;
+			border: 1px solid black;
+			margin: 0 auto;
+			p {
+				line-height: 2.1rem;
+				font-size: 1.8rem;
+				strong {
+					font-weight: bold; 
+					font-size: 2rem;
+				}
+			}
+			ul {
+				.custom-lists();
+				font-size: 1.6rem;
+				display: flex;
+				flex-direction: column;
+				justify-content: space-between;
+				li {
+					
+				}
+			}
+	}
 	}
 }
 
