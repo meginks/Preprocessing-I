@@ -88,79 +88,110 @@ html {
 
 .container {
 	max-width: 1000px;
-	.custom-flex(center, center);
+	display: flex;
 	margin: 0 auto;
 	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	height: auto;
 }
 
 header { 
-	padding: 20px;
-	.custom-flex(center, space-between);
+	width: 100%;
+	margin: 0 auto;
+	display: flex;
+	align-items: space-between;
+	justify-content: space-between;
 	h1 {
+		width: 30%;
 		font-size: 3.5rem;
 		color: @meginksgreen;
 		font-weight: bold;
+		padding: 2rem;
 	}
+	nav {
+		.custom-flex(center, space-around);
+				.custom-flex(center, center);
+				background-color: @meginksgreen;
+				width: 70%;
+				height:auto;
+				a {	
+					font-size: 2rem; 
+					text-decoration: none;
+					padding: 1rem 2rem;
+					color: #eee, #eee;
+				}
+				a:link{
+					color: #eee;
+				}
+				a:visited {
+					color: #eee;
+				}
+				a:hover{
+					background-color: @meginksyellow;
+					color: @meginksblack;
+				}
+		}
+		}
 }
 
-nav {
-	.custom-flex(center, space-around);
-		.nav-button {
-			.custom-flex(center, center);
-			background-color: @meginksgreen;
-			width: 20%;
-			height: 40px;
-			a {	
-				font-size: 2rem; 
-				text-decoration: none;
-				padding: 10px 20px;
-				color: #eee, #eee;
-			}
-			a:link{
-				color: #eee;
-			}
-			a:visited {
-				color: #eee;
-			}
-			a:hover{
-				background-color: @meginksyellow;
-				color: @meginksblack;
-			}
+@media (max-width: 500px) {
+	header {
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
 	}
-	@media (max-width: 500px) {
-		header {
+	h1 {
+		width: 100%;
+	}
+	nav {
+		display:flex;
 		flex-direction: column;
-		align-items: center;
-		justify-content: center;
-		}
-		h1 {
-			width: 50%;
-		}
-		nav {
-			flex-wrap: wrap;
-			width: 50%;
-		}
+		width: 100%;
 	}
-}
+
 
 .main-section {
-	h2 {
-		width:30%;
+	display: flex;
+	flex-direction: row;
+	.section-title {
+		width:30%; 
+		font-size: 3rem;
+		padding: 1rem;
+		background-color: @meginksgreen;
+		color: #eee;
+	}
+	.section-content {
+		width: 70%;
+
 	}
 }
 
 .intro {
+	color: #eee;
+	
 	width: 100%;
 	margin: 0 auto;
 	display:flex;
 	flex-direction: row;
 	border: 1px solid black;
+	.intro-content {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		width: 100%;
+		margin: 0 auto;
+		padding: 0 auto;
+		border: 1px solid black;
+	}
+	p {
+		font-size: 2rem;
+		padding: 1rem;
+		color: @meginksblack;
+	}
 } 
 
-.intro-content {
-	width: 100%;
-	border: 1px solid black;
-}
+
 
 .skills {
 	width: 100%;
@@ -204,9 +235,9 @@ nav {
 footer {
 	width: 100%;
 	border-top: 1px solid @meginksgreen;
-	padding-top: 20px;
+	padding-top: 2rem;
 	font-size: 2rem;
-	margin: 20px;
+	margin: 2rem;
 	.contact {
 		.custom-flex(center, center);
 		flex-direction: column;
