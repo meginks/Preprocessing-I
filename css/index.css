@@ -200,17 +200,33 @@ header nav a:hover {
   color: #272725;
 }
 @media (max-width: 500px) {
-  header header {
+  header {
     flex-direction: column;
     align-items: center;
     justify-content: center;
   }
-  header h1 {
+  h1 {
     width: 100%;
   }
-  header nav {
+  nav {
     display: flex;
     flex-direction: column;
+    width: 100%;
+  }
+}
+.main-content {
+  width: 100%;
+}
+@media (max-width: 500px) {
+  .main-content {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+  }
+  .main-content .section-title {
+    width: 100%;
+  }
+  .main-content .section-content {
     width: 100%;
   }
 }
@@ -228,7 +244,7 @@ header nav a:hover {
 .main-section .section-content {
   width: 70%;
 }
-.intro {
+#intro {
   color: #eee;
   width: 100%;
   margin: 0 auto;
@@ -236,7 +252,7 @@ header nav a:hover {
   flex-direction: row;
   border: 1px solid black;
 }
-.intro .intro-content {
+#intro .intro-content {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -245,22 +261,22 @@ header nav a:hover {
   padding: 0 auto;
   border: 1px solid black;
 }
-.intro p {
+#intro p {
   font-size: 2rem;
   padding: 1rem;
   color: #272725;
 }
-.skills {
+#skills {
   width: 100%;
   display: flex;
   flex-direction: row;
   border: 1px solid black;
 }
-.skills-box {
+#skills .skills-box {
   width: 100%;
   border: 1px solid black;
 }
-.education {
+#education {
   width: 100%;
   display: flex;
   flex-direction: row;
@@ -271,11 +287,11 @@ header nav a:hover {
   width: 33%;
   margin: 0 auto;
 }
-.work-history {
+#work-history {
   display: flex;
   border: 1px solid black;
 }
-.work-history .work-hist-box {
+#work-history .work-hist-box {
   width: 25%;
   border: 1px solid black;
   margin: 0 auto;
