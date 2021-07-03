@@ -1,52 +1,7 @@
-// Is this working?
-/* http://meyerweb.com/eric/tools/css/reset/ 
-   v2.0 | 20110126
-   License: none (public domain)
-*/
+@import "reset.less";
+@import "variables.less";
+@import "mixins.less";
 
-html, body, div, span, applet, object, iframe,
-h1, h2, h3, h4, h5, h6, p, blockquote, pre,
-a, abbr, acronym, address, big, cite, code,
-del, dfn, em, img, ins, kbd, q, s, samp,
-small, strike, strong, sub, sup, tt, var,
-b, u, i, center,
-dl, dt, dd, ol, ul, li,
-fieldset, form, label, legend,
-table, caption, tbody, tfoot, thead, tr, th, td,
-article, aside, canvas, details, embed, 
-figure, figcaption, footer, header, hgroup, 
-menu, nav, output, ruby, section, summary,
-time, mark, audio, video {
-	margin: 0;
-	padding: 0;
-	border: 0;
-	font-size: 100%;
-	font: inherit;
-	vertical-align: baseline;
-}
-/* HTML5 display-role reset for older browsers */
-article, aside, details, figcaption, figure, 
-footer, header, hgroup, menu, nav, section {
-	display: block;
-}
-body {
-	line-height: 1;
-}
-ol, ul {
-	list-style: none;
-}
-blockquote, q {
-	quotes: none;
-}
-blockquote:before, blockquote:after,
-q:before, q:after {
-	content: '';
-	content: none;
-}
-table {
-	border-collapse: collapse;
-	border-spacing: 0;
-}
 
 /* Set every element's box-sizing to border-box */
 * {
@@ -54,9 +9,293 @@ table {
 }
 
 html, body {
-    height: 100%;
+	height: auto;
+	background-color: @meginksblack;
 }
 
-html {
-	background-color: red;
+
+html { 
+	/*1rem = 10px now*/
+	font-size: 62.5%;
+}
+
+.container {
+	max-width: 1000px;
+	height: auto;
+	display: flex;
+	margin: 0 auto;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	height: auto;
+}
+
+header { 
+	margin: 0 auto;
+	width: 100%;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	.name {
+	width: 100%;
+	display: flex;
+	align-items: flex-start;
+	background-color: @meginksyellow;
+	}
+	h1 {
+		font-size: 3.5rem;
+		color: @meginksblack, black;
+		font-weight: bold;
+		padding: 2rem;
+		text-align:left;
+	}
+	nav {
+		border-bottom: .1rem solid @meginksyellow;
+		.custom-flex(center, space-around);
+		background-color: @meginksgreen;
+		padding: 2rem;
+		height:auto;
+				a {	
+					font-size: 2rem; 
+					text-decoration: none;
+					padding: 1rem 2rem;
+					color: #eee, #eee;
+				}
+				a:link{
+					color: #eee;
+				}
+				a:visited {
+					color: #eee;
+				}
+				a:hover{
+					background-color: @meginksyellow;
+					color: @meginksblack, black;
+				}
+		@media @mobile {
+			display:flex;
+			flex-direction: column;
+		}
+		}
+		@media @mobile {
+			flex-direction: column;
+			align-items: center;
+			justify-content: center;
+			//h1 {
+			//	text-align:center;
+			//}
+			//nav {
+			//	display:flex;
+			//	flex-direction: column;
+			//}	
+}
+		}
+		
+/**header media query**/ 
+
+
+.main-content {
+	width: 100%;
+}
+
+@media @mobile {
+	.main-content{
+		display: flex;
+		flex-direction: column;
+		width: 100%;
+		.section-title{
+		width: 100%;
+		}
+		.section-content{
+		width: 100%;
+		}
+	}
+}
+
+.main-section {
+	background-color: #eee;
+	display: flex;
+	flex-direction: column;
+	height: auto;
+	align-items: space-between;
+	justify-content: flex-start;
+	margin: 2rem;
+	.section-title {
+		width: 100%;
+		font-size: 3rem;
+		padding: 1rem;
+		background-color: @meginksgreen;
+		color: #eee;
+	}
+}
+
+#intro {
+	color: #eee;
+	display:flex;
+	flex-direction: column;
+	.intro-content {
+		color: @meginksblack;
+		display: flex;
+		justify-content: flex-start;
+		align-items: flex-start;
+		width: 100%;
+		margin: 0 auto;
+		padding: 0 auto;
+	}
+	p {
+		font-size: 2rem;
+		padding: 1rem;
+		color: @meginksblack, black;
+	}
+} 
+
+
+
+#skills {
+	display: flex;
+	flex-direction: column;
+	.skills-box {
+		width: 100%;
+		height: auto;
+		margin: 0 auto;
+		ul {
+			display: flex;
+			flex-direction: row;
+			font-size: 2rem;
+			li {
+				padding: 1rem;
+			}
+		}
+}
+} 
+//*@media (max-width: 500px) {
+//	#skills {
+//		.skills-box{
+//			ul {
+//			display: flex;
+//			flex-direction: column;
+//			align-items: center;
+//			justify-content: center;
+//			}
+//			}
+//		}
+//	}
+
+#education {
+	color: @meginksblack, black;
+	display: flex;
+	flex-direction: column;
+	.section-content {
+		display: flex;
+		flex-direction: row;
+		.education-box {
+			width: 33%;
+			margin: 0 auto;
+			p {
+				.section-para();
+			}
+			br {
+				line-height: 2.5rem;
+			}
+			ul {
+				list-style: none;
+				list-style-type: disc;
+				margin: auto;
+				padding: .5rem;
+				text-align: left;
+				font-size: 1.6rem;
+				display: flex;
+				flex-direction: column;
+				justify-content: space-between;
+			}
+		}
+	}
+}
+
+#work-history {
+	color: @meginksblack, black;
+	display: flex;
+	.main-section {
+		display: flex;
+	}
+	.section-content {
+		display: flex;
+		flex-direction: row;
+		flex-wrap: wrap;
+		.work-hist-box {
+			width: 25%;
+			margin: 0 auto;
+			p {
+				background-color: @meginksyellow;
+				line-height: 2.1rem;
+				font-size: 1.8rem;
+				border-bottom: 1px dotted @meginksblack, black;
+				strong {
+					font-weight: bold; 
+					font-size: 2rem;
+				}
+			border: 1px dotted @meginksblack;
+			}
+			ul {
+				.custom-lists();
+				font-size: 1.6rem;
+				display: flex;
+				flex-direction: column;
+				justify-content: space-between;
+			}
+		}
+	}
+}
+
+
+footer {
+	background-color: @meginksyellow;
+	width: 100%;
+	border-top: 1px solid @meginksgreen;
+	padding: 2rem;
+	font-size: 2rem;
+	margin: 2rem;
+	#contact {
+		.custom-flex(center, center);
+		flex-direction: column;
+		h2 {
+			font-weight: bold;
+			font-size: 3rem;
+		}
+	}
+} 
+
+//*** MOBILE ***/
+
+@media screen and @mobile {
+	.container {
+		display: flex;
+		flex-direction: column;
+		.main-content {
+			display:flex;
+			flex-direction: column;
+		}
+	}
+
+	#education {
+		display: flex;
+		flex-direction: column;
+		.section-content {
+			display: flex;
+			flex-direction: column;
+			.education-box {
+				width: 100%;
+			}
+		}
+	} 
+
+	#work-history {
+		.section-content {
+			display: flex;
+			flex-direction: column;
+			.work-hist-box {
+				width: 100%;
+			}
+		}
+	}
+
 }
